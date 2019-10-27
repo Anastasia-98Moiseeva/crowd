@@ -38,10 +38,11 @@ class Result : Fragment(){
         val txtResult = view.findViewById<TextView>(R.id.txt_result)
         txtResult.visibility = View.INVISIBLE
 
+        val progress = view.findViewById<ProgressBar>(R.id.progressBar)
+
         var str = "0"
         while (str == "0"){
             str = loadTextFromServer(url, txtResult)
-            val progress = view.findViewById<ProgressBar>(R.id.progressBar)
             progress.visibility = View.INVISIBLE
             txtResult.visibility = View.VISIBLE
         }
