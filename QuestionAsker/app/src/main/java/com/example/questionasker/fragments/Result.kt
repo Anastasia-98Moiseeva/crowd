@@ -36,15 +36,10 @@ class Result : Fragment(){
         val view = inflater.inflate(R.layout.result, container, false)
 
         val txtResult = view.findViewById<TextView>(R.id.txt_result)
-        txtResult.visibility = View.INVISIBLE
-
-        val progress = view.findViewById<ProgressBar>(R.id.progressBar)
 
         var str = "0"
         while (str == "0"){
             str = loadTextFromServer(url, txtResult)
-            progress.visibility = View.INVISIBLE
-            txtResult.visibility = View.VISIBLE
         }
 
         return view
@@ -77,41 +72,6 @@ class Result : Fragment(){
                 })
             }, 90000)
 
-
-       /* while (str == ""){
-            Thread {
-                //Thread.sleep(10000)
-                str = URL(url).readText()
-            }.start()
-        }*/
-
-
-        /*Thread(Runnable {
-            str = URL(url).readText()
-        }).start()*/
-
-        /*activity?.runOnUiThread(
-            object : Runnable {
-                override fun run() {
-                    str = URL(url).readText()
-                }
-            }
-        )*/
-
-
-        /*Thread {
-            activity?.runOnUiThread {
-                str = URL(url).readText()
-            }
-        }.start()*/
-
-
-        /* var str = ""
-         val handler = Handler()
-         handler.postDelayed(
-             Runnable {
-                 str = URL(url).readText()
-             }, 90000)*/
         return str
     }
 }

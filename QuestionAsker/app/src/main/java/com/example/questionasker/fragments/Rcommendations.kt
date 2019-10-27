@@ -34,17 +34,17 @@ class Recommendations : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.result, container, false)
+        val view = inflater.inflate(R.layout.recommendations, container, false)
 
         val uploadButton = view.findViewById<Button>(R.id.btn_upload_photo)
         uploadButton.setOnClickListener{
-           // pickPhotoFromGallery()
+           pickPhotoFromGallery()
         }
 
         return view
     }
 
-    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val photo = view?.findViewById<ImageView>(R.id.img_uploaded)!!
         val plusImg = view?.findViewById<ImageButton>(R.id.img_btn_plus)!!
 
@@ -73,6 +73,6 @@ class Recommendations : Fragment(){
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
 
         startActivityForResult(pickImageIntent, 1)
-    }*/
+    }
 
 }

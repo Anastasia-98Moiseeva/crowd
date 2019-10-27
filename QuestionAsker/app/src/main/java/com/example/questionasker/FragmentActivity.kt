@@ -9,8 +9,6 @@ class FragmentActivity : AppCompatActivity() {
 
     lateinit var router  : Router
 
-    var coinNumber = 10
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_activity)

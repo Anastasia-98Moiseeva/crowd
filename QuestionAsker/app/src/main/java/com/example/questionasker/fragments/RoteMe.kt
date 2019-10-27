@@ -45,9 +45,6 @@ class RoteMe : Fragment(){
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.rote_me, container, false)
 
-        val img_left = view.findViewById<ImageView>(R.id.img_left)
-        val img_right = view.findViewById<ImageView>(R.id.img_right)
-
         val plusButton = view.findViewById<ImageButton>(R.id.img_btn_plus)
         plusButton.setOnClickListener{
             pickPhotoFromGallery()
@@ -111,12 +108,6 @@ class RoteMe : Fragment(){
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
 
         startActivityForResult(pickImageIntent, 1)
-    }
-
-    private fun onClick(btn : Button, fragmentNew: () -> Fragment) {
-        btn.setOnClickListener{
-            router.navigateTo(true, fragmentNew)
-        }
     }
 
 }

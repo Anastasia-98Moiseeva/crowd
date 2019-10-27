@@ -59,10 +59,6 @@ class RoteOther : Fragment(){
 
         val nextBtn = view.findViewById<Button>(com.example.questionasker.R.id.btn_next)
         nextBtn.setOnClickListener{
-            /*var flag = "0"
-            while (flag != "1") {
-                flag = loadTextFromServer(nextUrl)
-            }*/
             index++
             radioBtnLeft.setChecked(false)
             radioBtnRight.setChecked(false)
