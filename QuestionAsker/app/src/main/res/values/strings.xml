@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">#Crowd4Me</string>
+    <string name="rote_me">Get Feedback</string>
+    <string name="rote_other">Give Feedback</string>
+    <string name="describe_your_problem">Describe your problem:</string>
+    <string name="hello">Hi! You are awesome!</string>
+    <string name="next">Next</string>
+    <string name="recomendations">Recommendations</string>
+    <string name="tip_do_not_take_pictures_in_front_of_the_sun_then_your_photos_will_be_dark">Tip: do not take pictures in front of the sun - then your photos will be dark.</string>
+    <string name="submit">Submit</string>
+</resources>
