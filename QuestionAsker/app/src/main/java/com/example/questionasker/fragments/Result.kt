@@ -1,5 +1,6 @@
 package com.example.questionasker.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -58,10 +59,11 @@ class Result : Fragment(){
 
                 client.newCall(request).enqueue(object : Callback {
 
+                    @SuppressLint("SetTextI18n")
                     override fun onResponse(call: Call?, response: Response?) {
                         val body = response?.body()?.string()
                         activity?.runOnUiThread(Runnable {
-                            textResult.setText(body)
+                            textResult.setText(body + "$")
                         })
                     }
 

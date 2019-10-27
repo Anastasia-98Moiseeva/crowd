@@ -41,19 +41,20 @@ class Recommendations : Fragment(){
            pickPhotoFromGallery()
         }
 
+        val submit = view.findViewById<Button>(R.id.btn_submit_photo)
+        //
+        // submit.setOnClickListener
+
         return view
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val photo = view?.findViewById<ImageView>(R.id.img_uploaded)!!
-        val plusImg = view?.findViewById<ImageButton>(R.id.img_btn_plus)!!
 
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == 1) {
                 fileUri = data?.data
             }
-            photo.setBackgroundColor(Color.TRANSPARENT)
-            plusImg.setAlpha(0.0f)
             loadPhoto(context, fileUri, photo)
         } else {
             super.onActivityResult(requestCode, resultCode, data)
